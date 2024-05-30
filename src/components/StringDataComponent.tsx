@@ -1,4 +1,3 @@
-// src/components/StringDataComponent.tsx
 import React from 'react';
 import { useStringData } from '../hooks/useStringData';
 
