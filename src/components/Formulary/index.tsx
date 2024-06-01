@@ -14,8 +14,9 @@ const PersonComponent = () => {
   useEffect(() => {
     if (shouldFetch && personId) {
       refetch();
+      setShouldFetch(false);
     }
-  }, [shouldFetch, personId, refetch]);
+  }, [shouldFetch]);
 
   return (
     <div>
