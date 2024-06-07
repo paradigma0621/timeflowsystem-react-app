@@ -8,5 +8,5 @@ function fetchPersons(): Promise<IPerson[]> {
 }
 
 export function usePersons(): UseQueryResult<IPerson[]> {
-  return useQuery(['key'], () => fetchPersons());
+  return useQuery(['keyPersons'], () => fetchPersons());
 }

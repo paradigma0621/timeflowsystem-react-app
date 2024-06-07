@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePerson } from '../../hooks/usePerson';
 
-const PersonComponent = () => {
+function PersonComponent() {
   const [personId, setPersonId] = useState<string>('');
   const [shouldFetch, setShouldFetch] = useState(false);
 

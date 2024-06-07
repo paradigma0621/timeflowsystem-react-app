@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { usePersons } from '../../hooks/usePersons';
 import { IPerson } from '../../types/person';
 import './PersonsTable.css';
@@ -11,6 +10,7 @@ function PersonList() {
   
   return (
     <div>
+      <h1>Persons Table</h1>
       <table>
         <thead>
           <tr>
@@ -18,6 +18,9 @@ function PersonList() {
             <th>Name</th>
             <th>Register Date</th>
             <th>Removed</th>
+            <th>CustomerId</th>
+            <th>ProfileId</th>
+            <th>Enrollment</th>
           </tr>
         </thead>
         <tbody>
@@ -27,12 +30,15 @@ function PersonList() {
               <td>{person.name}</td>
               <td>{person.registerDate}</td>
               <td>{person.removed ? 'Yes' : 'No'}</td>
+              <td>{person.customerId}</td>
+              <td>{person.profileId}</td>
+              <td>{person.enrollment}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <div>
-        {(data as IPerson[] | undefined)?.map(person => (
+        {(data)?.map(person => (
           <div key={person.id}>
             <h2>{person.name}</h2>
             <p>Register Date: {person.registerDate}</p>

@@ -5,7 +5,7 @@ function Learning02() {
   const [countMax, setCountMax] = useState<number>(0);
   const [shouldFetch, setShouldFetch] = useState(false);
 
-  const { data, error, isLoading, refetch } = runInAsync(countMax, shouldFetch);
+  const { refetch } = runInAsync(countMax, shouldFetch);
 
   const handleClick = () => {
     setShouldFetch(true);

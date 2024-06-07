@@ -3,10 +3,10 @@ import axios from 'axios';
 
 async function fetchPersonById(id: string): Promise<string> {
   const { data } = await axios.get(`http://localhost:8100/persons/jdbc/${id}`);
-  return data.name;
+  return data;
 }
 
-export function usePerson(id: string | null, shouldFetch: boolean) {
+export function savePerson(id: string | null, shouldFetch: boolean) {
   return useQuery<string>({
     queryKey: ['person', id],
     queryFn: async (): Promise<string> => {

@@ -18,15 +18,3 @@ export function runInAsync(countMax: number | null, shouldFetch: boolean) {
     enabled: shouldFetch && !!countMax, 
   });
 }
-
-/* Or like this:
-function fetchPersonById(countMax: number): Promise<string> {
-  return axios.get(`http://localhost:8100/persons/count/${countMax}`).then(response => response.data);
-}
-
-export function runInAsync(countMax: number, shouldFetch: boolean) {
-  return useQuery(['person', countMax], () => fetchPersonById(countMax), {
-    enabled: shouldFetch && !!countMax,
-  });
-}*/
-

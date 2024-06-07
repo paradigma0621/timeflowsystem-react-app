@@ -2,7 +2,7 @@ import React from 'react';
 import { useStringData } from '../hooks/useStringData';
 
 const StringDataComponent: React.FC = () => {
-  const { data, error, isLoading } = useStringData();
+  const {data, error, isLoading } = useStringData();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -11,6 +11,8 @@ const StringDataComponent: React.FC = () => {
   if (error) {
     return <div>Error: {(error as Error).message}</div>;
   }
+  
+ 
 
   return (
     <div>
