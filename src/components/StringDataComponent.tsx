@@ -1,21 +1,14 @@
-import React from 'react';
-import { useStringData } from '../hooks/useStringData';
+import { usePersonFindById } from 'features/person/pages/Info/hooks';
 
-const StringDataComponent: React.FC = () => {
-  const { data, error, isLoading } = useStringData();
+const StringDataComponent = () => {
+  const { data }  = usePersonFindById(3);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {(error as Error).message}</div>;
-  }
+console.log('data:' + data?.data);
 
   return (
     <div>
       <h1>String Data</h1>
-      <p>{data}</p>
+      {data?.data?.name}
     </div>
   );
 };
