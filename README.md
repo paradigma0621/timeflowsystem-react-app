@@ -8,6 +8,7 @@ The backend required to run this code is the microservice: [Core](https://github
 
 ## Setting the enviroment to run
 nvm use 21
+
 npm start
 
 ## Log
