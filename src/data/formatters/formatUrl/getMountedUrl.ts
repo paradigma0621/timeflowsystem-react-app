@@ -1,5 +1,5 @@
 import { GetMountedUrlProps } from './types'
-import { URL_BASE } from 'features/person/constants/api'
+import { URL_BASE } from 'constants/api'
 
 export const getMountedUrl = (
   urlBase: string,

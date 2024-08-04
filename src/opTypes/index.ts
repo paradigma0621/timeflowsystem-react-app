@@ -2,5 +2,7 @@ export type { PersonFindByIdRequestPathParams } from './PersonFindByIdRequestPat
 export type { PersonFindByIdResponse } from './PersonFindByIdResponse'
 export type { PersonFindAllRequestQueryParams } from './PersonFindAllRequestQueryParams'
 export type { PersonFindAllResponse } from './PersonFindAllRequestQueryParams'
+export type { PersonCreateResponse } from './PersonCreate'
+export type { PersonCreateRequestBody } from './PersonCreate'
 
 
