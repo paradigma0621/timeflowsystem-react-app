@@ -3,22 +3,19 @@ import StringDataComponent from './components/StringDataComponent';
 import PersonList from './components/PersonList';
 import FormularySavePerson from './components/FormularySavePerson';
 
-const App: React.FC = () => {
+import { HashRouter } from 'react-router-dom'
+
+import MainProvider from 'providers/main'
+import AppRoutes from 'routes'
+
+const App = () => {
   return (
-    <div>
-      <StringDataComponent /> 
-      <PersonList />
-      <FormularySavePerson />
-      {/*
-      <PersonsTable /> 
-        <Formulary />
-      
-     
-    TODO trabalhar nesse cara <PersonsTable /> 
-      <FormularySavePerson />*/}
-    </div>
-  );
-};
+    <MainProvider>
+      <HashRouter>
+        <AppRoutes />
+      </HashRouter>
+    </MainProvider>
+  )
+}
 
-export default App;
-
+export default App

@@ -1,40 +1,27 @@
 import React, { useState } from 'react';
-import { createPerson } from './saveOnePerson';
 import { usePersonCreateMutation } from 'api/person'
 //import { UsePersonCreateMutationProps } from './types'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { formatSubmitData } from 'data/formatters'
 import { IPerson } from 'types/person';
 import { URL_BASE, PERSON_PATH_CREATE} from 'constants/api';
 
 const AddPerson = () => {
-  //const queryClient = useQueryClient();
-
-  const { mutate, isPending } = usePersonCreateMutation()
   
-  //useNavigate() may be used only in the context of a <Router> component.
+  const { mutate, isPending } = usePersonCreateMutation()
+    
   const navigate = useNavigate()
   
-  const [name, setName] = useState('');
-  const [enrollment, setEnrollment] = useState('');
-  const [registerDate, setRegisterDate] = useState('');
-  const [removed, setRemoved] = useState(false);
-  const [customerId, setCustomerId] = useState('');
-  const [profileId, setProfileId] = useState('');
+  const [name, setName] = useState('')
+  const [enrollment, setEnrollment] = useState('')
+  const [registerDate, setRegisterDate] = useState('')
+  const [removed, setRemoved] = useState(false)
+  const [customerId, setCustomerId] = useState('')
+  const [profileId, setProfileId] = useState('')
   
-var person = {
-  name: 'string',
-  enrollment: 'string',
-  registerDate: '2021-07-28T19:20:30.45Z',
-  removed: true,
-  customerId: 0,
-  profileId: 0
-};
-
   const mutation = (data: IPerson) => {
     const payload = {
-      ...data,
-      person
+      ...data
     }
 
     mutate(
@@ -51,10 +38,9 @@ var person = {
     )
   }
 
-
-  const handleAddPerson = () => {
+  const onSubmit = () => {
     const newPerson: IPerson = {
-      id: '', // You need to provide the id here
+      id: '',
       name,
       enrollment,
       registerDate,
@@ -62,17 +48,15 @@ var person = {
       customerId: Number(customerId),
       profileId: Number(profileId),
     };
-  };
- /*
-  const onSubmit = (data: WorkplaceDeviceCreatePasswordSchemaProps) =>
-  mutation(data)
-  */
+    mutation(newPerson)
+  }
+  
   return (
     <div>
       <h2>Add New Person</h2>
       <form onSubmit={(e) => {
         e.preventDefault();
-        handleAddPerson();
+        onSubmit();
       }}>
         <div>
           <label>Name
@@ -136,7 +120,7 @@ var person = {
           </label>
         </div>
         {/* <button type="submit" disabled={mutation.isLoading}>*/}
-        <button type="submit">
+        <button type="submit" disabled = {isPending}>
           Add Person
         </button>
       </form>
