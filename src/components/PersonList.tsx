@@ -1,6 +1,8 @@
 import { usePersonFindAllQuery } from 'api/person'
 import 'styles/PersonsTable.css';
 import { IPerson } from 'types/person';
+import clock from 'assets/clock.png';
+
 
 function PersonList() {
   const searchTerm = ''
@@ -17,10 +19,10 @@ function PersonList() {
     }
   )
  var persons = data?.content || [];
-
-  return (
+ return (
     <div>
       <h1>Persons Table</h1>
+        <img src={clock} alt="clock" />
         <table>
         <thead>
           <tr>
