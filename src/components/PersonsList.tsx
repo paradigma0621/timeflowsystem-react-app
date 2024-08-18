@@ -1,10 +1,10 @@
 import { usePersonFindAllQuery } from 'api/person'
 import 'styles/PersonsTable.css';
 import { IPerson } from 'types/person';
-import clock from 'assets/clock.png';
 
 
-function PersonList() {
+
+function PersonsList() {
   const searchTerm = ''
   const { data } = usePersonFindAllQuery(
     {
@@ -18,11 +18,10 @@ function PersonList() {
       throwOnError: false
     }
   )
- var persons = data?.content || [];
+ const persons = data?.content || [];
  return (
     <div>
       <h1>Persons Table</h1>
-        <img src={clock} alt="clock" />
         <table>
         <thead>
           <tr>
@@ -55,4 +54,4 @@ function PersonList() {
   );
 };
 
-export default PersonList;
+export default PersonsList;

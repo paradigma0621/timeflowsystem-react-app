@@ -1,0 +1,16 @@
+
+ nav {
+    align-items: center;
+    display: flex;
+    color: #835d83;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+
+  nav:hover {
+    color: #00FF00;
+  }
+  
