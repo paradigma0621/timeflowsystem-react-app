@@ -2,11 +2,9 @@ import { usePersonFindAllQuery } from 'api/person'
 import 'styles/PersonsTable.css';
 import { IPerson } from 'types/person';
 
-
-
 function PersonsList() {
   const searchTerm = ''
-  const { data } = usePersonFindAllQuery(
+  const { data, isPending } = usePersonFindAllQuery(
     {
       page: 0,
       searchTerm,
@@ -14,12 +12,16 @@ function PersonsList() {
       sort: ['id', 'ASC']
     },
     {
-      enabled: true, //isBelongsCustomer && !!searchTerm?.length,
+      enabled: true,
       throwOnError: false
     }
   )
- const persons = data?.content || [];
- return (
+  const persons = data?.content || [];
+
+  if (isPending)
+    return <div>Loading...</div>;
+    
+  return (
     <div>
       <h1>Persons Table</h1>
         <table>
@@ -47,7 +49,7 @@ function PersonsList() {
               <td>{person.enrollment}</td>
             </tr>
           ))
-        }
+          }
         </tbody>
           </table> 
       </div>

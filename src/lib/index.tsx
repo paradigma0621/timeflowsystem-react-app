@@ -14,6 +14,7 @@ export {
 } from './reactQuery'
 export type {
   FetchNextPageOptions,
+  InfiniteData,
   InfiniteQueryConfig,
   InfiniteQueryObserverResult,
   MutationConfig,

@@ -1,4 +1,4 @@
-import StringDataComponent from '../components/StringDataComponent';
+//import StringDataComponent from '../components/StringDataComponent';
 import PersonsList from '../components/PersonsList';
 import AddPerson from 'components/AddPerson';
 import Menu from 'components/Menu';
@@ -22,7 +22,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
                 <Route path='addperson' element={<AddPerson />} />
                 <Route path='about' element={<About />} />
                 <Route path='personsList' element={<PersonsList />} />
-                <Route path='stringData' element={<StringDataComponent />} />
+               {/* <Route path='stringData' element={<StringDataComponent />} /> */}
               </Route>
               <Route path='*' element={<NotFound />} />
             </Routes>

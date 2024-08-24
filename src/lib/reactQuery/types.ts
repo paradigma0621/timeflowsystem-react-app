@@ -1,5 +1,6 @@
 import {
   FetchNextPageOptions,
+  InfiniteData,
   InfiniteQueryObserverResult,
   QueryKey,
   UseInfiniteQueryOptions,
@@ -32,7 +33,8 @@ export type InfiniteQueryConfig<FetcherFnType extends (...args: any) => any> =
   Omit<
     UseInfiniteQueryOptions<
       PromiseValue<ReturnType<FetcherFnType>>,
-      AxiosError
+      AxiosError,
+      InfiniteData<Awaited<ReturnType<FetcherFnType>>>
     >,
     'queryKey' | 'queryFn' | 'getNextPageParam' | 'initialPageParam'
   >
@@ -42,7 +44,8 @@ export type SuspenseInfiniteQueryConfig<
 > = Omit<
   UseSuspenseInfiniteQueryOptions<
     PromiseValue<ReturnType<FetcherFnType>>,
-    AxiosError
+    AxiosError,
+    InfiniteData<Awaited<ReturnType<FetcherFnType>>>
   >,
   'queryKey' | 'initialPageParam' | 'queryFn'
 >
@@ -54,4 +57,9 @@ export type MutationConfig<FetcherFnType extends (...args: any) => any> =
     Parameters<FetcherFnType>
   >
 
-export type { FetchNextPageOptions, InfiniteQueryObserverResult, QueryKey }
+export type {
+  FetchNextPageOptions,
+  InfiniteData,
+  InfiniteQueryObserverResult,
+  QueryKey
+}
