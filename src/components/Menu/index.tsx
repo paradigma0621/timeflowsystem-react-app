@@ -15,8 +15,8 @@ export default function Menu() {
     label: 'personsList',
     to: '/personsList'
   }, {
-    label: 'StringData',
-    to: '/stringData'
+    label: 'OnePerson',
+    to: '/onePerson'
   }
 
 ];

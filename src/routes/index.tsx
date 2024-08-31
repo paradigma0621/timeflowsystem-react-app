@@ -1,6 +1,6 @@
-//import StringDataComponent from '../components/StringDataComponent';
-import PersonsList from '../components/PersonsList';
-import AddPerson from 'components/AddPerson';
+import OnePerson from '../components/Person/FindById/OnePerson';
+import PersonsList from '../components/Person/FindAll/PersonsList';
+import AddPerson from 'components/Person/Save/AddPerson';
 import Menu from 'components/Menu';
 import DefaultPage from 'components/DefaultPage';
 import Inicio from 'components/Inicio';
@@ -22,7 +22,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
                 <Route path='addperson' element={<AddPerson />} />
                 <Route path='about' element={<About />} />
                 <Route path='personsList' element={<PersonsList />} />
-               {/* <Route path='stringData' element={<StringDataComponent />} /> */}
+                <Route path='onePerson' element={<OnePerson />} />
               </Route>
               <Route path='*' element={<NotFound />} />
             </Routes>
