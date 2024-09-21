@@ -2,8 +2,8 @@ import OnePerson from '../components/Person/FindById/OnePerson';
 import PersonsList from '../components/Person/FindAll/PersonsList';
 import AddPerson from 'components/Person/Save/AddPerson';
 import Menu from 'components/Menu';
-import DefaultPage from 'components/DefaultPage';
-import Inicio from 'components/Inicio';
+import Header from 'components/Header';
+import Start from 'components/Start';
 import About from 'components/About';
 import NotFound from 'components/NotFound';
 import { HashRouter, Routes, Route } from 'react-router-dom';
@@ -17,12 +17,12 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
           </div>
           <div style={{ flex: 1, padding: '20px', overflowY: 'auto' }}> 
             <Routes>
-              <Route path='/' element={<DefaultPage />} >
-                <Route index element={<Inicio />} />
+              <Route path='/' element={<Header />} >
+                <Route index element={<Start />} />
                 <Route path='addperson' element={<AddPerson />} />
+                <Route path='onePerson' element={<OnePerson />} />
                 <Route path='about' element={<About />} />
                 <Route path='personsList' element={<PersonsList />} />
-                <Route path='onePerson' element={<OnePerson />} />
               </Route>
               <Route path='*' element={<NotFound />} />
             </Routes>

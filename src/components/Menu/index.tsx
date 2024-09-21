@@ -21,11 +21,11 @@ export default function Menu() {
 
 ];
   return (
-    <nav >
+    <nav className='nav-menu'>
       <ul>
         {rotas.map((rota) => (
-          <li key={rota.label}>
-            <Link to={rota.to}>
+          <li className='nav-menu-hover' key={rota.label}>
+            <Link className='menu-text' to={rota.to}>
               {rota.label}
             </Link>
           </li>

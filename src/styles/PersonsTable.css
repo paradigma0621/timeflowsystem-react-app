@@ -1,6 +1,9 @@
-table {
+.person-table {
   width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
+  font-size: 30px;
 }
 
 th, td {

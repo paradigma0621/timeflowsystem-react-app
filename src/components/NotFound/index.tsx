@@ -1,9 +1,9 @@
 import 'styles/NotFound.css';
 
-export default function Inicio() {
+export default function NotFound() {
   return (
-      <div>
-        Página de não encontrado
+      <div className='not-found'>
+        Page Not Found
       </div>
   );
 }

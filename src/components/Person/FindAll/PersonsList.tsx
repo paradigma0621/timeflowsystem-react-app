@@ -24,7 +24,7 @@ function PersonsList() {
   return (
     <div>
       <h1>Persons Table</h1>
-        <table>
+        <table className='person-table'>
         <thead>
           <tr>
             <th>ID</th>

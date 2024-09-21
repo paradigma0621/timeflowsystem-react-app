@@ -2,12 +2,12 @@ import { Outlet } from 'react-router-dom';
 import clock from 'assets/clocks.png';
 import 'styles/DefaultPage.css';
 
-export default function PaginaPadrao() {
+export default function Header() {
   return (
     <>
-      <header>
-        <img src={clock} alt="clock" /> {/* */}
-        The record of efficiency in working time
+      <header className='header-main'>
+        <img className='image' src={clock} alt="clock" /> {/* */}
+        The record of working time efficiency measurement
       </header>
       <div>
         <Outlet />

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { formatSubmitData } from 'data/formatters'
 import { IPerson } from 'types/person';
 import { URL_BASE, PERSON_PATH_CREATE} from 'constants/api';
+import 'styles/SavePerson.css';
 
 const AddPerson = () => {
   
@@ -46,13 +47,13 @@ const AddPerson = () => {
       registerDate,
       removed,
       customerId: Number(customerId),
-      profileId: Number(profileId),
+      profileId: Number(profileId)
     };
     mutation(newPerson)
   }
   
   return (
-    <div>
+    <div className='save-person-style'>
       <h2>Add New Person</h2>
       <form onSubmit={(e) => {
         e.preventDefault();

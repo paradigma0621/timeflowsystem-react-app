@@ -1,9 +1,9 @@
-header {
+.header-main {
   font-size: 32px;
   text-align: center;
 }
 
-img {
+.image {
   width: 100%;
   height: auto;
 }

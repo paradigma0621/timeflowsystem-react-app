@@ -1,16 +1,22 @@
 
- nav {
-    align-items: center;
-    display: flex;
-    color: #835d83;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: .2s ease;
-  }
+.menu-text {
+  color:blue;
+  text-align: left;
+  font-size: 30px ;
+}
 
-  nav:hover {
+.nav-menu {
+  align-items: center;
+  display: flex;
+  color: #835d83;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.nav-menu-hover:hover {
     color: #00FF00;
-  }
+}
   
