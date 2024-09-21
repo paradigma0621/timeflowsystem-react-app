@@ -1,6 +1,7 @@
 import OnePerson from '../components/Person/FindById/OnePerson';
 import PersonsList from '../components/Person/FindAll/PersonsList';
 import AddPerson from 'components/Person/Save/AddPerson';
+import AddClocking from 'components/Clocking/Save/AddClocking';
 import Menu from 'components/Menu';
 import Header from 'components/Header';
 import Start from 'components/Start';
@@ -20,6 +21,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
               <Route path='/' element={<Header />} >
                 <Route index element={<Start />} />
                 <Route path='addperson' element={<AddPerson />} />
+                <Route path='addclocking' element={<AddClocking />} />                
                 <Route path='onePerson' element={<OnePerson />} />
                 <Route path='about' element={<About />} />
                 <Route path='personsList' element={<PersonsList />} />

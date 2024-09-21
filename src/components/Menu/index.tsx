@@ -9,6 +9,9 @@ export default function Menu() {
     label: 'Save Person',
     to: '/addperson'
   }, {
+    label: 'Save Clocking',
+    to: '/addclocking'
+  }, {
     label: 'About',
     to: '/about'
   }, {

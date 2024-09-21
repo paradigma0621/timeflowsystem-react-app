@@ -41,7 +41,7 @@ const AddPerson = () => {
 
   const onSubmit = () => {
     const newPerson: IPerson = {
-      id: '',
+      id: 0,
       name,
       enrollment,
       registerDate,
