@@ -1,7 +1,7 @@
 import { GetMountedUrlProps } from './types'
-import { URL_BASE } from 'constants/api'
+import { SECURITY_URL_BASE } from 'constants/api'
 
-export const getMountedUrl = (
+export const getMountedSecurityUrl = (
   urlBase: string,
   params?: GetMountedUrlProps
 ): string => {
@@ -19,5 +19,5 @@ export const getMountedUrl = (
     }
   })
 
-  return URL_BASE + url + (urlSearchParams.toString() ? `?${urlSearchParams}` : '')
+  return SECURITY_URL_BASE + url + (urlSearchParams.toString() ? `?${urlSearchParams}` : '')
 }

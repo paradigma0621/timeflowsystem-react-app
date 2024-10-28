@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { usePersonCreateMutation } from 'api/person'
-//import { UsePersonCreateMutationProps } from './types'
 import { useNavigate } from 'react-router-dom'
 import { formatSubmitData } from 'data/formatters'
 import { IPerson } from 'types/person';

@@ -4,14 +4,15 @@ import AddPerson from 'components/Person/Save/AddPerson';
 import AddClocking from 'components/Clocking/Save/AddClocking';
 import Menu from 'components/Menu';
 import Header from 'components/Header';
-import Start from 'components/Start';
+import Login from 'components/Login';
 import About from 'components/About';
 import NotFound from 'components/NotFound';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import UserAccountsList from 'components/UserAccount/FindAll/UserAccountsList';
 
   const AppRoutes = () => {
     return (
-      <HashRouter>
+      <Router>
         <div style={{ display: 'flex', height: '100vh' }}>
           <div style={{ width: '250px', backgroundColor: '#f0f0f0', border: '2px solid black' }}> 
             <Menu /> 
@@ -19,18 +20,19 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
           <div style={{ flex: 1, padding: '20px', overflowY: 'auto' }}> 
             <Routes>
               <Route path='/' element={<Header />} >
-                <Route index element={<Start />} />
-                <Route path='addperson' element={<AddPerson />} />
-                <Route path='addclocking' element={<AddClocking />} />                
-                <Route path='onePerson' element={<OnePerson />} />
-                <Route path='about' element={<About />} />
-                <Route path='personsList' element={<PersonsList />} />
+              <Route index element={<About />} />
+              <Route path="/start" element={<Login />} />
+              <Route path='addperson' element={<AddPerson />} />
+              <Route path='addclocking' element={<AddClocking />} />                
+              <Route path='onePerson' element={<OnePerson />} />
+              <Route path='personsList' element={<PersonsList />} />
+              <Route path='userAccountsList' element={<UserAccountsList />} />
               </Route>
               <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 

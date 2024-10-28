@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useClockingCreateMutation } from 'api/clocking'
-//import { UsePersonCreateMutationProps } from './types'
 import { useNavigate } from 'react-router-dom'
 import { formatSubmitData } from 'data/formatters'
 import { URL_BASE, CLOCKING_PATH_CREATE} from 'constants/api';

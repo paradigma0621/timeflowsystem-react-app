@@ -3,8 +3,8 @@ import 'styles/Menu.css';
 
 export default function Menu() {
   const rotas = [{
-    label: 'Início',
-    to: '/'
+    label: 'Login',
+    to: '/start'
   }, {
     label: 'Save Person',
     to: '/addperson'
@@ -13,13 +13,16 @@ export default function Menu() {
     to: '/addclocking'
   }, {
     label: 'About',
-    to: '/about'
+    to: '/'
   }, {
     label: 'personsList',
     to: '/personsList'
   }, {
     label: 'OnePerson',
     to: '/onePerson'
+  }, {
+    label: 'Users Passwords',
+    to: '/userAccountsList'
   }
 
 ];
