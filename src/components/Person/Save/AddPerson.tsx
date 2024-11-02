@@ -119,14 +119,10 @@ const AddPerson = () => {
           />
           </label>
         </div>
-        {/* <button type="submit" disabled={mutation.isLoading}>*/}
         <button type="submit" disabled = {isPending}>
           Add Person
         </button>
       </form>
-      {/*mutation.isLoading && <p>Loading...</p>}
-      {mutation.isError && <p>Error: {(mutation.error as Error).message}</p>}
-    {mutation.isSuccess && <p>Person Added Successfully!</p>*/}
     </div>
   );
 };

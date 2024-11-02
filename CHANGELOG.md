@@ -1,9 +1,13 @@
 # Changelog
 
+## 2024-11-02
+### Commit  (Add Logout Functionality)
+- Add logout functionality by accessing the backend Security microservice endpoint `/logout` to properly terminate the session of a previously logged-in account. Session cookies are cleared upon logout, enforcing a secure logout process.
+
 ## 2024-10-28
-### Commit  (Add UserAccount data models. Add authentication validation accessing Security microservice)
+### Commit 5efccdd (Add UserAccount data models. Add authentication validation accessing Security microservice)
 - Add IUserAccount and IUserAccountLoginData interfaces
-- Add authentication validation accessing /backendLoginEndpoint endpoint from the Security microservice
+- Add authentication validation accessing `/backendLoginEndpoint` endpoint from the Security microservice
 
 ## 2024-09-21
 ### Commit 703a94d (Added Clocking instance saving support)
@@ -12,12 +16,12 @@
 ## 2024-09-21
 ### Commit f09caa2 (Added styles using className)
 - Apply `className` attributes to HTML elements for styling
-- Added corresponding CSS style files
+- Add corresponding CSS style files
 
 ## 2024-08-31
 ### Commit bf73816 (Updated GET and POST methods of Entity Person)
 - Add GET and POST methods for the Person data model, following a structured pattern with React Query 5
-- Added POST method using an HTML form to persist Person records in the database
+- Add POST method using an HTML form to persist Person records in the database
 
 ## 2024-08-18
 ### Commit 74a1bce (Added Router/Routes/Route implementation. Now the site has a left menu)

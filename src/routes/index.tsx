@@ -5,6 +5,7 @@ import AddClocking from 'components/Clocking/Save/AddClocking';
 import Menu from 'components/Menu';
 import Header from 'components/Header';
 import Login from 'components/Login';
+import Logout from 'components/Logout';
 import About from 'components/About';
 import NotFound from 'components/NotFound';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -27,6 +28,7 @@ import UserAccountsList from 'components/UserAccount/FindAll/UserAccountsList';
               <Route path='onePerson' element={<OnePerson />} />
               <Route path='personsList' element={<PersonsList />} />
               <Route path='userAccountsList' element={<UserAccountsList />} />
+              <Route path='logoutAccount' element={<Logout />} />
               </Route>
               <Route path='*' element={<NotFound />} />
             </Routes>

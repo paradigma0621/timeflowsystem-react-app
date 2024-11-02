@@ -23,8 +23,10 @@ export default function Menu() {
   }, {
     label: 'Users Passwords',
     to: '/userAccountsList'
+  }, {
+    label: 'Logout',
+    to: '/logoutAccount'
   }
-
 ];
   return (
     <nav className='nav-menu'>

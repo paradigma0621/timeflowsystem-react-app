@@ -8,7 +8,7 @@ const fetchUserAccountLogin = async (
     bodyParams: opTypes.UserAccountRequestBody
   ): Promise<string> => {
     return httpClient
-      .post(getMountedSecurityUrl(constants.USERACCOUNT_LOGIN), bodyParams, {
+      .post(getMountedSecurityUrl(constants.USER_ACCOUNT_LOGIN), bodyParams, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },

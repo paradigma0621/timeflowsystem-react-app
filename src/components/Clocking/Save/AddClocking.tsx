@@ -12,7 +12,6 @@ const AddClocking = () => {
     
   const navigate = useNavigate()
   
-  /*escreva a exemplo da linha abaixo os useState para os campos: do IClocking*/
   const [secondsDuration, setSecondsDuration] = useState('')
   const [grade, setGrade] = useState('')
   const [description, setDescription] = useState('')
@@ -156,14 +155,10 @@ const AddClocking = () => {
           </label>
         </div>
 
-        {/* <button type="submit" disabled={mutation.isLoading}>*/}
         <button type="submit" disabled = {isPending}>
           Add Clocking
         </button>
       </form>
-      {/*mutation.isLoading && <p>Loading...</p>}
-      {mutation.isError && <p>Error: {(mutation.error as Error).message}</p>}
-    {mutation.isSuccess && <p>Person Added Successfully!</p>*/}
     </div>
   );
 };
