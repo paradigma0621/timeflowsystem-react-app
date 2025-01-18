@@ -12,10 +12,9 @@ The backend microservices required to run this code are:
 To work in pair with backend see the file: [Backend-Frontend commits paring](https://github.com/paradigma0621/timeflowsystem-react-app/COMMIT_HASH_PAIRING_FRONTEND_BACKEND.md)
 
 ## Setting the enviroment to run
-nvm use 21
-
 npm start
 
 ## Log
+2024-11-02 - Final Version Utilizing Browser Cookies
 2024-05-18 - Started project allowing GET HTTP requisition to backend
 2024-10-28 - Added authentication validation using username and password

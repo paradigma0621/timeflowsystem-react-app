@@ -1,7 +1,7 @@
 # Changelog
 
-## 2024-11-02
-### Commit  (Add Logout Functionality)
+## 2024-11-02 (Final Version Utilizing Browser Cookies)
+### Commit bd4df09 (Add Logout Functionality)
 - Add logout functionality by accessing the backend Security microservice endpoint `/logout` to properly terminate the session of a previously logged-in account. Session cookies are cleared upon logout, enforcing a secure logout process.
 
 ## 2024-10-28
@@ -43,4 +43,3 @@
 ## 2024-05-19
 ### Commit f8aeb5a (Initialize project using Create React App)
 - Repository creation
-

@@ -14,6 +14,14 @@ Checkout these specific commit hashes to ensure the repositories work in paralle
 
 The tables below show the valid pairing dates, the commit hash of each repository, and their descriptions."
 
+### Achievement of the Goal 1 (Authorization and Authentication using cookies)
+
+| Date       | Security  | Frontend |  Core   | Description                                                                         |
+| ---------- | --------  | -------- | ------- | ----------------------------------------------------------------------------------- |
+| 2025-01-17 | 447686f   | bd4df09  | ecc2f8e | The goal of implementing authorization and authentication **using cookies** has     |
+|	     |           |          |         |	been successfully achieved endpoint from the security module (in via page "Users    |
+|	     |           |          |         |	Passswords" by aligning the following components to their respective                |
+
 ### PHASE 2 - Security (backend) Integration with frontend
 
 | Date       | Security  | Frontend | Description                                                                               |
