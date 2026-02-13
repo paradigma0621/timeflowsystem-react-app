@@ -18,6 +18,8 @@ const AddPerson = () => {
   const [removed, setRemoved] = useState(false)
   const [customerId, setCustomerId] = useState('')
   const [profileId, setProfileId] = useState('')
+  const [birthDate, setBirthDate] = useState('')
+  const [deletionDate, setDeletionDate] = useState('')
   
   const mutation = (data: IPerson) => {
     const payload = {
@@ -29,10 +31,7 @@ const AddPerson = () => {
       {
         onError: err => console.log(err?.message),
         onSuccess: data => {
-          navigate(
-            URL_BASE + PERSON_PATH_CREATE,
-            { state: data }
-          )
+          alert("Registro criado com sucesso!");
         }
       }
     )
@@ -46,7 +45,9 @@ const AddPerson = () => {
       registerDate,
       removed,
       customerId: Number(customerId),
-      profileId: Number(profileId)
+      profileId: Number(profileId),
+      birthDate,
+      deletionDate
     };
     mutation(newPerson)
   }
@@ -119,6 +120,31 @@ const AddPerson = () => {
           />
           </label>
         </div>
+
+        <div>
+          <label>BirthDate
+          {' '}
+          <input
+          type="date"
+          value={birthDate}
+          required={true}
+          onChange={(e) => setBirthDate(e.target.value)}
+          />
+          </label>
+        </div>  
+
+        <div>
+          <label>DeletionDate
+          {' '}
+          <input
+          type="datetime-local"
+          value={deletionDate}
+          required={true}
+          onChange={(e) => setDeletionDate(e.target.value)}
+          />
+          </label>
+        </div>  
+
         <button type="submit" disabled = {isPending}>
           Add Person
         </button>

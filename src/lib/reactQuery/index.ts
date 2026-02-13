@@ -14,15 +14,14 @@ import {
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const millisecondsPerSecond = 1000
-const secondsPerMinute = 60
-const minutesPerCache = 5
+const secondsPerMinute = 5
 
 const queryConfig: DefaultOptions = {
   queries: {
-    gcTime: millisecondsPerSecond * secondsPerMinute * minutesPerCache,
+    gcTime: millisecondsPerSecond * secondsPerMinute,
     refetchOnWindowFocus: false,
     retry: false,
-    staleTime: 240000,
+    staleTime: 5000,
     throwOnError: true
   }
 }

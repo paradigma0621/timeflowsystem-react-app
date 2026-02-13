@@ -21,11 +21,17 @@ export default function Menu() {
     label: 'OnePerson',
     to: '/onePerson'
   }, {
+    label: 'clockingList',
+    to: '/clockingsList'
+  }, {
     label: 'Users Passwords',
     to: '/userAccountsList'
   }, {
     label: 'Logout',
     to: '/logoutAccount'
+  }, {
+    label: 'ExampleLogin',
+    to: '/exampleComponent'
   }
 ];
   return (

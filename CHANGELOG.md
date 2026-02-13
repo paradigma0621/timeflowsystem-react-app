@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-02-13 ()
+### Commit  (Add birth/deletion dates to Person and implement Clocking list)
+- Add birthDate and deletionDate fields to Persons
+- Add Clocking entity with find all registers feature in main menu ("clockingList").
+
 ## 2024-11-02 (Final Version Utilizing Browser Cookies)
 ### Commit bd4df09 (Add Logout Functionality)
 - Add logout functionality by accessing the backend Security microservice endpoint `/logout` to properly terminate the session of a previously logged-in account. Session cookies are cleared upon logout, enforcing a secure logout process.

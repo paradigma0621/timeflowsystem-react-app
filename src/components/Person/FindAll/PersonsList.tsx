@@ -34,6 +34,8 @@ function PersonsList() {
             <th>CustomerId</th>
             <th>ProfileId</th>
             <th>Enrollment</th>
+            <th>Birth Date</th>
+            <th>Deletion Date</th>
           </tr>
         </thead>
         <tbody>
@@ -47,6 +49,8 @@ function PersonsList() {
               <td>{person.customerId}</td>
               <td>{person.profileId}</td>
               <td>{person.enrollment}</td>
+              <td>{person.birthDate}</td>
+              <td>{person.deletionDate}</td>
             </tr>
           ))
           }

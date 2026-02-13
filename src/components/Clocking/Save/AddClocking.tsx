@@ -32,10 +32,7 @@ const AddClocking = () => {
       {
         onError: err => console.log(err?.message),
         onSuccess: data => {
-          navigate(
-            URL_BASE + CLOCKING_PATH_CREATE,
-            { state: data }
-          )
+          alert("Registro criado com sucesso!");
         }
       }
     )

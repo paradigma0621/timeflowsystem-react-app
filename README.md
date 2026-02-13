@@ -12,6 +12,8 @@ The backend microservices required to run this code are:
 To work in pair with backend see the file: [Backend-Frontend commits paring](https://github.com/paradigma0621/timeflowsystem-react-app/COMMIT_HASH_PAIRING_FRONTEND_BACKEND.md)
 
 ## Setting the enviroment to run
+npm install (Install dependencies (first run only))
+
 npm start
 
 ## Log

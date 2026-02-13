@@ -5,5 +5,7 @@ export interface IPerson {
   removed: boolean,
   customerId: number,
   profileId: number,
-  enrollment: string
+  enrollment: string,
+  birthDate: string,
+  deletionDate: string
 }
